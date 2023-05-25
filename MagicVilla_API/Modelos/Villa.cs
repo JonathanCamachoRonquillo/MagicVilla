@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace MagicVilla_API.Modelos
 {
@@ -6,6 +7,7 @@ namespace MagicVilla_API.Modelos
     {
         //Crear entidades de BD desde Codigo
         [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]//ID se asigna automaticamente y se incrementa en 1
         public int Id { get; set; }
         public string Nombre { get; set; }
         public string Detalle { get; set; }
